@@ -1,5 +1,7 @@
 # Interview Coach - AI 面试教练
 
+> **Claude Code Skill** - 这是一个为 [Claude Code](https://claude.ai/code) 设计的技能插件
+
 模拟真实面试场景，提供即时反馈和综合评估报告。帮助你发现不足、提升面试表现。
 
 ## 特点
@@ -27,17 +29,41 @@
 - **表达力** - 语言表达的清晰度和准确性
 - **解决问题** - 分析和解决问题的能力
 
-## 安装
+## 前置要求
 
-1. 复制此目录到你的 Claude Code skills 目录：
+- [Claude Code](https://claude.ai/code) - Anthropic 官方 AI 编程助手
+
+## 一键安装
 
 ```bash
+# Clone 项目
+git clone https://github.com/wsdone/interview-coach.git
+cd interview-coach
+
+# 运行安装脚本
+chmod +x install.sh
+./install.sh
+```
+
+或者使用 curl 一键安装：
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/wsdone/interview-coach/main/install.sh | bash
+```
+
+## 手动安装
+
+```bash
+# 1. Clone 项目
+git clone https://github.com/wsdone/interview-coach.git
+
+# 2. 复制到 Claude Code skills 目录
 cp -r interview-coach ~/.claude/skills/
 ```
 
-## 使用
+## 使用方法
 
-在 Claude Code 中输入：
+安装完成后，在 **Claude Code** 中输入：
 
 ```
 /interview-coach
@@ -72,12 +98,17 @@ cp -r interview-coach ~/.claude/skills/
 
 ```
 interview-coach/
-└── SKILL.md              # 技能定义文件（包含完整的面试流程）
+├── install.sh         # 一键安装脚本
+└── SKILL.md           # 技能定义文件（包含完整的面试流程）
 ```
 
 ## 许可证
 
 MIT License
+
+## 相关项目
+
+- [resume-guide](https://github.com/wsdone/resume-guide) - 引导式简历生成器
 
 ## 贡献
 
